@@ -1,0 +1,19 @@
+<!doctpe html>
+<html>
+    <head>
+        <title>Cliente-Servidor</title>
+    </head>
+    <body>
+        <div id="contenedor"></div>
+        <script>
+            fetch('http://127.0.0.1:5000')
+              .then(response => {
+                return response.json();
+              })
+              .then(data => {
+                document.getElementById("contenedor").innerHTML = data.mensaje
+              })
+          
+        </script>
+    </body>
+</html>
